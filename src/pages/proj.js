@@ -58,7 +58,7 @@ function Proj({closeProj}) {
                     
                     <hr class="hr hr-blurry" />
 
-                    <b><h6><a href='https://github.com/jamescastro98/Covert-Cats'>Covert Command/Control Channek</a></h6></b>
+                    <b><h6><a href='https://github.com/jamescastro98/Covert-Cats'>Covert Command/Control Channel</a></h6></b>
                     <img src={cc} style={{ width: '80%'}} alt=''/>
                     <p>
                         <b>Description</b>
