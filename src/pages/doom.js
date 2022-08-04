@@ -1,7 +1,6 @@
 import React from 'react'
 import { Modal, Frame} from '@react95/core'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import DosPlayer from "../components/DosPlayer";   
 import '../style/misc.css'
 
 
