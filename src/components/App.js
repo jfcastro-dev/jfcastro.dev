@@ -18,7 +18,7 @@ class App extends Component {
     super(props);
     this.state = {
       openBio: true,
-      openExp: true,
+      openResume: true,
       openProj: true
     }
 }
@@ -33,7 +33,7 @@ render(){
     bio=<Bio closeBio={()=>this.setState({openBio: false})}/>
   }
   if(this.state.openExp){
-    exp=<Exp closeExp={()=>this.setState({openExp: false})}/>
+    exp=<Exp closeExp={()=>this.setState({openResume: false})}/>
   }
   if(this.state.openProj){
     proj=<Proj closeProj={()=>this.setState({openProj: false})}/>
