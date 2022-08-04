@@ -6,7 +6,7 @@ import c4me from '../assets/c4me.png';
 import typosquat from '../assets/typosquat.png';
 import cc from '../assets/cc.png';
 
-function Proj({closeProj}) {
+function Proj({closeProj, wid}) {
     
     return (
         <Modal
@@ -16,7 +16,7 @@ function Proj({closeProj}) {
             style={{
                 left:'36vw',
                 top: '10vh',
-                width: '30vw',
+                width: wid,
             }}>
             <Frame
                 bg="white"

@@ -3,7 +3,7 @@ import { Modal, Frame } from '@react95/core'
 import 'bootstrap/dist/css/bootstrap.min.css'   
 import '../style/misc.css'
 
-function Exp({closeExp}) {
+function Exp({closeExp,wid}) {
     
     return (
         <Modal
@@ -13,7 +13,7 @@ function Exp({closeExp}) {
             style={{
                 left:'67vw',
                 top: '10vh',
-                width: '33vw',
+                width: wid,
             }}>
             <Frame
                 bg="white"

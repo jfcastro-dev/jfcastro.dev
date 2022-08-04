@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../style/misc.css'
 
 
-function Doom({closeDoom}) {
+function Doom({closeDoom, wid}) {
     return (
         <Modal
             title={'Doom' }
@@ -13,7 +13,7 @@ function Doom({closeDoom}) {
             style={{
                 left:'36vw',
                 top: '10vh',
-                width: '50vw',
+                width:wid,
             }}>
             <Frame
                 bg="white"
@@ -25,7 +25,7 @@ function Doom({closeDoom}) {
                     background:"black"
 				}}
             >
-        <iframe id="jsdos" frameborder="0"  width="800" height="500"
+        <iframe id="jsdos" frameborder="0"  width="600" height="500"
         src="https://dos.zone/player/?bundleUrl=https%3A%2F%2Fcdn.dos.zone%2Fcustom%2Fdos%2Fultimate-doom.jsdos?anonymous=1"
         allowfullscreen>
             </iframe>

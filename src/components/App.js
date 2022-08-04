@@ -22,28 +22,46 @@ class App extends Component {
       openBio: true,
       openResume: true,
       openProj: true,
-      openDoom: false
+      openDoom: false,
+      isMobile: false
     }
 }
 
-
+componentDidMount(){
+  if( window.innerWidth < 850){
+    this.setState({isMobile:true,openResume:false,openProj:false})
+  }
+}
 
 render(){
+  
   let bio=<></>;
   let exp=<></>;
   let proj=<></>;
   let doom=<></>;
-  if(this.state.openBio){
-    bio=<Bio closeBio={()=>this.setState({openBio: false})}/>
+  if(this.state.openBio && this.state.isMobile){
+    bio=<Bio wid='70vw' closeBio={()=>this.setState({openBio: false})}/>
   }
-  if(this.state.openResume){
-    exp=<Exp closeExp={()=>this.setState({openResume: false})}/>
+  if(this.state.openBio && this.state.isMobile==false){
+    bio=<Bio wid='32vw' closeBio={()=>this.setState({openBio: false})}/>
   }
-  if(this.state.openProj){
-    proj=<Proj closeProj={()=>this.setState({openProj: false})}/>
+  if(this.state.openResume && this.state.isMobile){
+    exp=<Exp wid='70vw' closeExp={()=>this.setState({openResume: false})}/>
   }
-  if(this.state.openDoom){
-    doom=<Doom closeDoom={()=>this.setState({openDoom: false})}/>
+  if(this.state.openResume && this.state.isMobile==false){
+    exp=<Exp wid='33vw' closeExp={()=>this.setState({openResume: false})}/>
+  }
+  if(this.state.openProj && this.state.isMobile){
+    proj=<Proj wid='70vw' closeProj={()=>this.setState({openProj: false})}/>
+  }
+  if(this.state.openProj && this.state.isMobile==false){
+    proj=<Proj wid='30vw' closeProj={()=>this.setState({openProj: false})}/>
+  }
+  if(this.state.openDoom && this.state.isMobile){
+    doom=<Doom wid='600' closeDoom={()=>this.setState({openDoom: false})}/>
+  }
+  if(this.state.openDoom && this.state.isMobile==false){
+    doom=<Doom wid='50vw' closeDoom={()=>this.setState({openDoom: false})}/>
   }
   return(
     <div className='bg'>
@@ -79,7 +97,7 @@ render(){
             }
         />
       </ThemeProvider>
-     <ClippyProvider/>
+
     </div>
 )};
   }

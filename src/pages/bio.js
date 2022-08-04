@@ -4,7 +4,7 @@ import me from '../assets/me.JPG';
 import 'bootstrap/dist/css/bootstrap.min.css'   
 import '../style/misc.css'
 
-function Bio({closeBio}) {
+function Bio({closeBio,wid}) {
    
     return (
         <div>
@@ -15,7 +15,7 @@ function Bio({closeBio}) {
             style={{
                 left:'3vw',
                 top: '10vh',
-                width: '32vw',
+                width: wid,
             }}>
             <Frame
                 bg="white"
