@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="%PUBLIC_URL%/js-dos/js-dos.js"></script>
+    <link rel="stylesheet" href="%PUBLIC_URL%/js-dos/js-dos.css">
+    <script>
+       emulators.pathPrefix = "%PUBLIC_URL%/js-dos/";
+    </script>
+        <script>
+          window.onload = () => {
+              document.getElementById("jsdos").focus();
+  
+              window.addEventListener("message", (e) => {
+                  if (e.data.message === "dz-player-exit") {
+                      document.getElementById("jsdos").style.display = "none";
+                      alert("js-dos exited");
+                  }
+              });
+          };
+      </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />

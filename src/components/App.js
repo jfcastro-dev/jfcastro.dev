@@ -4,6 +4,8 @@ import about from '../assets/About.png';
 import resume from '../assets/Resume.png';
 import project from '../assets/Proj.png';
 import Bio from '../pages/bio'
+import joy from '../assets/game.png'
+import Doom from '../pages/doom'
 import Exp from '../pages/exp'
 import Proj from '../pages/proj'
 import '@react95/icons/icons.css';
@@ -19,7 +21,8 @@ class App extends Component {
     this.state = {
       openBio: true,
       openResume: true,
-      openProj: true
+      openProj: true,
+      openDoom: false
     }
 }
 
@@ -28,20 +31,25 @@ class App extends Component {
 render(){
   let bio=<></>;
   let exp=<></>;
-  let proj=<></>
+  let proj=<></>;
+  let doom=<></>;
   if(this.state.openBio){
     bio=<Bio closeBio={()=>this.setState({openBio: false})}/>
   }
-  if(this.state.openExp){
+  if(this.state.openResume){
     exp=<Exp closeExp={()=>this.setState({openResume: false})}/>
   }
   if(this.state.openProj){
     proj=<Proj closeProj={()=>this.setState({openProj: false})}/>
   }
+  if(this.state.openDoom){
+    doom=<Doom closeDoom={()=>this.setState({openDoom: false})}/>
+  }
   return(
     <div className='bg'>
       <ThemeProvider theme={'millenium'}>
         <GlobalStyle />
+        {doom}
         {bio}
         {exp}
         {proj}
@@ -62,11 +70,16 @@ render(){
                     <img src={project} className={'icon'} alt=''/>
                         Projects
                     </List.Item>
+                    <List.Divider />
+                    <List.Item onClick={()=>this.setState({openDoom: true})}>
+                    <img src={joy} className={'icon'} alt=''/>
+                        Doom
+                    </List.Item>
                 </List>
             }
         />
       </ThemeProvider>
-    <ClippyProvider/>
+     <ClippyProvider/>
     </div>
 )};
   }
