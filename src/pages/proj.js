@@ -15,7 +15,7 @@ function Proj({closeProj, wid}) {
             buttons={[{ value: "Close", onClick: closeProj  }]}
             style={{
                 left:'36vw',
-                top: '10vh',
+                top: '5vh',
                 width: wid,
             }}>
             <Frame

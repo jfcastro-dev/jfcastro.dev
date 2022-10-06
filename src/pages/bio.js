@@ -14,7 +14,7 @@ function Bio({closeBio,wid}) {
             buttons={[{ value: "Close", onClick: closeBio  }]}
             style={{
                 left:'3vw',
-                top: '10vh',
+                top: '5vh',
                 width: wid,
             }}>
             <Frame
@@ -31,27 +31,31 @@ function Bio({closeBio,wid}) {
                 <div className='grid-container'>
                     <div className='grid-item' >
                         <p>
-                            Hey, I'm James. I'm an incoming Software Engineer @ Canon and a 
+                            Hey, I'm James. I'm an NY-based Software Engineer @ Canon and a 
                             Stony Brook Computer Science Grad. I've spent some time working
-                            over at Endeavor Streaming as a QA & SDET. I love creating useful
+                            over at Endeavor Streaming as a QA & SDET, so I have experience with
+                            testing & ensuring bug free deliverables. I love creating useful
                             tools and learning new technologies. I've worked with a lot of Python,
-                            NodeJS & AWS.
+                            NodeJS & AWS. Currently, I'm doing a refresher on some React & other technologies
+                            I've used in undergrad.
                         </p>
                     </div>
-                    <div className='grid-item'>
-                        <img src={me}  style={{ width: '80%'}} alt="this is me" />
+                    <div className='pic'>
+                        <div className='grid-item'>
+                            <img src={me}  style={{ width: '80%'}} alt="this is me" />
+                        </div>
                     </div>
                 </div>
                 <p>
                     I try to keep busy when I'm not working by playing guitar, gardening,
                     lifting weights, and of course spending time with some quality friends.
                     I ocassionally go on hikes, take some photos, and try my hand at some
-                    new recipes.
+                    new recipes. Wanna connect? Add me on <a href='https://www.linkedin.com/in/james-castro-b38b0717b/'>
+                    LinkedIn here</a>
                 </p>
             </Frame>
         </Modal >
         </div>
     )
 }
-
 export default Bio;

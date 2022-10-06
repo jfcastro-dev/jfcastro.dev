@@ -19,9 +19,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      openBio: true,
-      openResume: true,
-      openProj: true,
+      openBio: false,
+      openResume: false,
+      openProj: false,
       openDoom: false,
       isMobile: false
     }
@@ -31,6 +31,11 @@ componentDidMount(){
   if( window.innerWidth < 850){
     this.setState({isMobile:true,openResume:false,openProj:false})
   }
+
+  this.setState({openBio: true})
+  if(window.innerWidth > 850){
+    this.setState({openProj: true, openResume:true})
+  }
 }
 
 render(){
@@ -39,29 +44,35 @@ render(){
   let exp=<></>;
   let proj=<></>;
   let doom=<></>;
-  if(this.state.openBio && this.state.isMobile){
-    bio=<Bio wid='70vw' closeBio={()=>this.setState({openBio: false})}/>
+
+  if(this.state.isMobile===false){
+    if(this.state.openBio){
+      bio=<Bio wid='32vw' closeBio={()=>this.setState({openBio: false})}/>
+    }
+    if(this.state.openResume){
+      exp=<Exp wid='30vw' closeExp={()=>this.setState({openResume: false})}/>
+    }
+    if(this.state.openProj){
+      proj=<Proj wid='30vw' closeProj={()=>this.setState({openProj: false})}/>
+    }
+
+    if(this.state.openDoom){
+      doom=<Doom wid='50vw' closeDoom={()=>this.setState({openDoom: false})}/>
+    }
   }
-  if(this.state.openBio && this.state.isMobile==false){
-    bio=<Bio wid='32vw' closeBio={()=>this.setState({openBio: false})}/>
-  }
-  if(this.state.openResume && this.state.isMobile){
-    exp=<Exp wid='70vw' closeExp={()=>this.setState({openResume: false})}/>
-  }
-  if(this.state.openResume && this.state.isMobile==false){
-    exp=<Exp wid='33vw' closeExp={()=>this.setState({openResume: false})}/>
-  }
-  if(this.state.openProj && this.state.isMobile){
-    proj=<Proj wid='70vw' closeProj={()=>this.setState({openProj: false})}/>
-  }
-  if(this.state.openProj && this.state.isMobile==false){
-    proj=<Proj wid='30vw' closeProj={()=>this.setState({openProj: false})}/>
-  }
-  if(this.state.openDoom && this.state.isMobile){
-    doom=<Doom wid='600' closeDoom={()=>this.setState({openDoom: false})}/>
-  }
-  if(this.state.openDoom && this.state.isMobile==false){
-    doom=<Doom wid='50vw' closeDoom={()=>this.setState({openDoom: false})}/>
+  else{
+    if(this.state.openBio){
+      bio=<Bio wid='70vw' closeBio={()=>this.setState({openBio: false})}/>
+    }
+    if(this.state.openResume){
+      exp=<Exp wid='70vw' closeExp={()=>this.setState({openResume: false})}/>
+    }
+    if(this.state.openProj){
+      proj=<Proj wid='70vw' closeProj={()=>this.setState({openProj: false})}/>
+    }
+    if(this.state.openDoom){
+      doom=<Doom wid='600' closeDoom={()=>this.setState({openDoom: false})}/>
+    }
   }
   return(
     <div className='bg'>
@@ -79,14 +90,14 @@ render(){
                         About
                     </List.Item>
                     <List.Divider />
-                    <List.Item onClick={()=>this.setState({openResume: true})}>
-                    <img src={resume} className={'icon'} alt='' />
-                        Resume
-                    </List.Item>
-                    <List.Divider />
                     <List.Item onClick={()=>this.setState({openProj: true})}>
                     <img src={project} className={'icon'} alt=''/>
                         Projects
+                    </List.Item>
+                    <List.Divider />
+                    <List.Item onClick={()=>this.setState({openResume: true})}>
+                    <img src={resume} className={'icon'} alt='' />
+                        Resume
                     </List.Item>
                     <List.Divider />
                     <List.Item onClick={()=>this.setState({openDoom: true})}>
@@ -97,7 +108,7 @@ render(){
             }
         />
       </ThemeProvider>
-
+    <ClippyProvider/>
     </div>
 )};
   }

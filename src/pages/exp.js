@@ -12,7 +12,7 @@ function Exp({closeExp,wid}) {
             buttons={[{ value: "Close", onClick: closeExp  }]}
             style={{
                 left:'67vw',
-                top: '10vh',
+                top: '5vh',
                 width: wid,
             }}>
             <Frame
@@ -26,6 +26,32 @@ function Exp({closeExp,wid}) {
 				}}
             >
                 <h4>Experience</h4>
+                <p>
+                        <h5>Software Development Engineer</h5>
+                        <h6><b>Canon</b></h6>
+                        <i>Aug 2022 - Present</i>
+                    </p>
+                    <p>
+                        <b>Responsibilities</b>
+                        <ul>
+                            <li>
+                                Architected & programmed the data validation system for streaming services for the UFC, 
+                                WWE, English Premier League and other tier 1 clients using PyTest & AWS Services
+                            </li>
+                            <li>
+                                Evaluated Jira tickets related to data reporting and delivery.
+                            </li>
+                            <li>
+                                Migrated and maintained the internal testing dashboard for Data Services, used by the entire QA team.
+                            </li>
+                            <li>
+                                Worked in an international team based in New York, England and China in an agile 
+                                development environment.
+                            </li>
+                        </ul>
+                    </p>
+                    <p><b>Tech:</b> TypeScript, Node.js, React, Python, GCP, SQL</p>
+                    <hr class="hr hr-blurry" />
                     <p>
                         <h5>Software Development Engineer in Test</h5>
                         <h6><b>Endeavor</b></h6>
@@ -36,7 +62,7 @@ function Exp({closeExp,wid}) {
                         <ul>
                             <li>
                                 Architected & programmed the data validation system for streaming services for the UFC, 
-                                WWE, EnglishPremier League and other tier 1 clients using PyTest & AWS Services
+                                WWE, English Premier League and other tier 1 clients using PyTest & AWS Services
                             </li>
                             <li>
                                 Evaluated Jira tickets related to data reporting and delivery.

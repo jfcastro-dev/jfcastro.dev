@@ -13,7 +13,7 @@ function Doom({closeDoom, wid}) {
             style={{
                 left:'36vw',
                 top: '10vh',
-                width:wid,
+                width:'650',
             }}>
             <Frame
                 bg="white"
