@@ -3,13 +3,14 @@ import me from '../assets/me.jpg'
 import '../misc/style.css'
 
 interface FrameProps {
-  closeWindow: () => void
-  width: string
+  closeWindow: () => void;
+  width: string;
+  x: string;
 }
 
-export default function About ({ closeWindow, width }: FrameProps) {
+export default function About ({ closeWindow, x, width }: FrameProps) {
   return (
-        <Window closeWindow={closeWindow} width={width} title={'About Me'}>
+        <Window closeWindow={closeWindow} x={x} width={width} title={'About Me'}>
             <h4>Hello!</h4>
             <div className='grid-container'>
                 <div className='grid-item' >
