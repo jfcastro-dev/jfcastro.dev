@@ -28,7 +28,7 @@ export default function Window ({ closeWindow, width, title, x,children }: Props
                 padding={20}
                 style={{
                   overflowY: 'auto',
-                  maxHeight: '50vh'
+                  maxHeight: '70vh'
                 }}>
 
                {children}

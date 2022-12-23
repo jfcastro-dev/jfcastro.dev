@@ -39,7 +39,7 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
             </p>
 
                 <p><b>Currently Reading: </b> Thinking Fast and Slow</p>
-                <p><b>Currently Playing: </b> Animal Crossing</p>
+                <p><b>Currently Playing: </b> Baldur's Gate 3 (Early Access)</p>
                 <p><b>Currently Watching: </b> House of the Dragon</p>
         </Window>
   )

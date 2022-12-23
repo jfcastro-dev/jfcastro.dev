@@ -1,8 +1,9 @@
 import { TaskBar, List } from '@react95/core'
 import about from '../assets/About.png'
 import resume from '../assets/Resume.png'
-import project from '../assets/Proj.png'
+import camera from '../assets/camera.png'
 import joy from '../assets/game.png'
+import blog from '../assets/blog.png'
 
 interface BottomNavProps{
     bio: () => void;
@@ -23,8 +24,12 @@ export default function BottomNav ({bio, doom, exp}: BottomNavProps) {
             </List.Item>
             <List.Divider />
             <List.Item onClick={() => console.log('Click')}>
-            <img src={project} className={'icon'} alt=''/>
-                Projects
+            <img src={blog} className={'icon'} alt=''/>
+                Blog
+            </List.Item>
+            <List.Item onClick={doom}>
+            <img src={camera} className={'icon'} alt=''/>
+                Gallery
             </List.Item>
             <List.Divider />
             <List.Item onClick={exp}>
@@ -36,6 +41,7 @@ export default function BottomNav ({bio, doom, exp}: BottomNavProps) {
             <img src={joy} className={'icon'} alt=''/>
                 Doom
             </List.Item>
+            
         </List>
     }
 />
