@@ -3,13 +3,13 @@ import { Modal, Frame } from '@react95/core'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 interface FrameProps {
-  closeWindow: () => void;
-  width: string;
-  title: string;
-  x: string;
+  closeWindow: () => void
+  width: string
+  title: string
+  x: string
 }
 
-export default function Window ({ closeWindow, width, title, x,children }: PropsWithChildren<FrameProps>) {
+export default function Window ({ closeWindow, width, title, x, children }: PropsWithChildren<FrameProps>) {
   return (
         <div>
         <Modal
@@ -17,7 +17,7 @@ export default function Window ({ closeWindow, width, title, x,children }: Props
             closeModal={closeWindow}
             buttons={[{ value: 'Close', onClick: closeWindow }]}
             style={{
-              left: x ,
+              left: x,
               top: '5vh',
               width
             }}>

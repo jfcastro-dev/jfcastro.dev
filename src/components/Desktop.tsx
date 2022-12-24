@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { ThemeProvider } from '@react95/core'
 import { GlobalStyle } from '../misc/GlobalStyle'
 import BottomNav from './BottomNav'
@@ -8,23 +8,31 @@ import Doom from '../pages/doom'
 import Blog from '../pages/blog'
 
 export default function Desktop () {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [showAbout, setShowAbout] = useState<boolean>(true);
-  const [showResume, setShowResume] = useState<boolean>(true);
-  const [showDoom, setShowDoom] = useState<boolean>(false);
-  const [showBlog, setShowBlog] = useState<boolean>(true);
+  const [defaultWidth, setDefaultWidth] = useState<string>('30vw')
+  const [isMobile, setIsMobile] = useState<boolean>(false)
+  const [showAbout, setShowAbout] = useState<boolean>(true)
+  const [showResume, setShowResume] = useState<boolean>(true)
+  const [showDoom, setShowDoom] = useState<boolean>(false)
+  const [showBlog, setShowBlog] = useState<boolean>(true)
 
+  useEffect(() => {
+    if (window.innerWidth < 1000) {
+      setDefaultWidth('70vw')
+      setShowBlog(false)
+      setShowResume(false)
+      setIsMobile(true)
+    }
+  }, [])
   return (
         <div>
-        <ThemeProvider theme={'millenium'}>
-            <GlobalStyle />
-            {showAbout && <About closeWindow={() => setShowAbout(false)} x={'3vw'} width={'30vw'}/>}
-            {showDoom && <Doom closeWindow={() => setShowDoom(false)}  x={'33vw'} width={'650'}/>}
-            {showResume && <Resume closeWindow={() => setShowResume(false)}  x={'67vw'} width={'30vw'}/>}
-            {showBlog && <Blog closeWindow={() => setShowBlog(false)}  x={'34vw'} width={'32vw'}/>}
-            <BottomNav bio={()=>setShowAbout(true)} exp={()=>setShowResume(true)} doom={()=>setShowDoom(true)} />
-        </ThemeProvider>
-
+          <ThemeProvider theme={'millenium'}>
+              <GlobalStyle />
+              {showAbout && <About closeWindow={() => setShowAbout(false)} x={isMobile ? '15vw' : '4vw'} width={defaultWidth}/>}
+              {showDoom && <Doom closeWindow={() => setShowDoom(false)} x={isMobile ? '15vw' : '33vw'} width={'650'}/>}
+              {showResume && <Resume closeWindow={() => setShowResume(false)} x={isMobile ? '15vw' : '66vw'} width={defaultWidth}/>}
+              {showBlog && <Blog closeWindow={() => setShowBlog(false)} x={isMobile ? '15vw' : '35vw'} width={defaultWidth}/>}
+              <BottomNav bio={() => setShowAbout(true)} exp={() => setShowResume(true)} doom={() => setShowDoom(true)} />
+          </ThemeProvider>
         </div>
   )
 }

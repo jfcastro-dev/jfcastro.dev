@@ -1,17 +1,16 @@
 import { TaskBar, List } from '@react95/core'
 import about from '../assets/About.png'
 import resume from '../assets/Resume.png'
-import camera from '../assets/camera.png'
 import joy from '../assets/game.png'
 import blog from '../assets/blog.png'
 
-interface BottomNavProps{
-    bio: () => void;
-    doom: () => void;
-    exp: () => void;
+interface BottomNavProps {
+  bio: () => void
+  doom: () => void
+  exp: () => void
 }
 
-export default function BottomNav ({bio, doom, exp}: BottomNavProps) {
+export default function BottomNav ({ bio, doom, exp }: BottomNavProps) {
   return (
     <>
 
@@ -27,10 +26,6 @@ export default function BottomNav ({bio, doom, exp}: BottomNavProps) {
             <img src={blog} className={'icon'} alt=''/>
                 Blog
             </List.Item>
-            <List.Item onClick={doom}>
-            <img src={camera} className={'icon'} alt=''/>
-                Gallery
-            </List.Item>
             <List.Divider />
             <List.Item onClick={exp}>
             <img src={resume} className={'icon'} alt='' />
@@ -41,7 +36,7 @@ export default function BottomNav ({bio, doom, exp}: BottomNavProps) {
             <img src={joy} className={'icon'} alt=''/>
                 Doom
             </List.Item>
-            
+
         </List>
     }
 />

@@ -5,10 +5,11 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'standard-with-typescript',
   ],
   overrides: [
   ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
     project: 'tsconfig.json',
     ecmaVersion: 'latest',
@@ -19,5 +20,7 @@ module.exports = {
   ],
   rules: {
     "react/react-in-jsx-scope": "off",
+    "react/no-unescaped-entities":"off",
+    "@typescript-eslint/explicit-function-return-type": "off"
   }
 }

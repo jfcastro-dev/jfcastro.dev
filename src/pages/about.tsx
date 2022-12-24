@@ -3,9 +3,9 @@ import me from '../assets/me.jpg'
 import '../misc/style.css'
 
 interface FrameProps {
-  closeWindow: () => void;
-  width: string;
-  x: string;
+  closeWindow: () => void
+  width: string
+  x: string
 }
 
 export default function About ({ closeWindow, x, width }: FrameProps) {

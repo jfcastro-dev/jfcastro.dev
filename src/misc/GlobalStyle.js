@@ -1,20 +1,20 @@
-import { createGlobalStyle } from '@xstyled/styled-components';
+import { createGlobalStyle } from '@xstyled/styled-components'
 
-import woff2 from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.woff2';
-import woff from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.woff';
-import ttf from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.ttf';
-import eot from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.eot';
-import videowoff2 from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.woff2';
-import videowoff from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.woff';
-import videottf from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.ttf';
-import videoeot from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.eot';
+import woff2 from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.woff2'
+import woff from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.woff'
+import ttf from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.ttf'
+import eot from '@react95/core/cjs/GlobalStyle/font/MS-Sans-Serif.eot'
+import videowoff2 from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.woff2'
+import videowoff from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.woff'
+import videottf from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.ttf'
+import videoeot from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.eot'
 
 /**
  * This is a fork of what is in the node modules - this was not supporting themes.
  * I just needed to change the background color
  */
-import { scrollbars } from '@react95/core/cjs/GlobalStyle/Scrollbar';
-import Cursor from '@react95/core/cjs/Cursor/Cursor';
+import { scrollbars } from '@react95/core/cjs/GlobalStyle/Scrollbar'
+import Cursor from '@react95/core/cjs/Cursor/Cursor'
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -89,6 +89,6 @@ const GlobalStyle = createGlobalStyle`
   .nwse-resize         { ${Cursor.NwseResize} }
   .zoom-in             { ${Cursor.ZoomIn} }
   .zoom-out            { ${Cursor.ZoomOut} }
-`;
+`
 
-export {GlobalStyle};
+export { GlobalStyle }
