@@ -20,8 +20,7 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
                         over at Endeavor Streaming as a QA & SDET, so I have experience with
                         testing & ensuring bug free deliverables. I love creating useful
                         tools and learning new technologies. I've worked with a lot of Python,
-                        NodeJS & AWS. Currently, I'm doing a refresher on some React & other technologies
-                        I've used in undergrad.
+                        NodeJS w/ TypeScript, and cloud services like AWS & Google Cloud.
                     </p>
                 </div>
                 <div className='pic'>
@@ -32,7 +31,7 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
             </div>
             <p>
                 I try to keep busy when I'm not working by playing guitar, gardening,
-                lifting weights, and of course spending time with some quality friends.
+                lifting weights, watching the Mets, and of course spending time with some quality friends.
                 I ocassionally go on hikes, take some photos, and try my hand at some
                 new recipes. Wanna connect? Add me on <a href='https://www.linkedin.com/in/james-castro-b38b0717b/'>
                 LinkedIn here</a>

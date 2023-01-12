@@ -41,8 +41,8 @@ export default function Resume ({ closeWindow, x, width }: FrameProps) {
                     <b>Responsibilities</b>
                     <ul>
                         <li>
-                            Architected & programmed the data validation system for streaming services for the UFC,
-                            WWE, English Premier League and other tier 1 clients using PyTest & AWS Services
+                            Created & programmed the data validation system for streaming services for the UFC,
+                            WWE, English Premier League and other tier 1 clients using PyTest & AWS CodeBuild.
                         </li>
                         <li>
                             Evaluated Jira tickets related to data reporting and delivery.

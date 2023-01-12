@@ -10,17 +10,20 @@ import Blog from '../pages/blog'
 export default function Desktop () {
   const [defaultWidth, setDefaultWidth] = useState<string>('30vw')
   const [isMobile, setIsMobile] = useState<boolean>(false)
-  const [showAbout, setShowAbout] = useState<boolean>(true)
-  const [showResume, setShowResume] = useState<boolean>(true)
+  const [showAbout, setShowAbout] = useState<boolean>(false)
+  const [showResume, setShowResume] = useState<boolean>(false)
   const [showDoom, setShowDoom] = useState<boolean>(false)
-  const [showBlog, setShowBlog] = useState<boolean>(true)
+  const [showBlog, setShowBlog] = useState<boolean>(false)
 
   useEffect(() => {
     if (window.innerWidth < 1000) {
       setDefaultWidth('70vw')
-      setShowBlog(false)
-      setShowResume(false)
+      setShowAbout(true)
       setIsMobile(true)
+    } else {
+      setShowBlog(true)
+      setShowAbout(true)
+      setShowResume(true)
     }
   }, [])
   return (
