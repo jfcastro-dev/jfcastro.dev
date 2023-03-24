@@ -34,7 +34,7 @@ export default function Desktop () {
               {showDoom && <Doom closeWindow={() => setShowDoom(false)} x={isMobile ? '15vw' : '33vw'} width={'650'}/>}
               {showResume && <Resume closeWindow={() => setShowResume(false)} x={isMobile ? '15vw' : '66vw'} width={defaultWidth}/>}
               {showBlog && <Blog closeWindow={() => setShowBlog(false)} x={isMobile ? '15vw' : '35vw'} width={defaultWidth}/>}
-              <BottomNav bio={() => setShowAbout(true)} exp={() => setShowResume(true)} doom={() => setShowDoom(true)} />
+              <BottomNav bio={() => setShowAbout(true)} exp={() => setShowResume(true)} doom={() => setShowDoom(true)} blog={() => setShowBlog(true)} />
           </ThemeProvider>
         </div>
   )

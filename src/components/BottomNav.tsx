@@ -2,15 +2,16 @@ import { TaskBar, List } from '@react95/core'
 import about from '../assets/About.png'
 import resume from '../assets/Resume.png'
 import joy from '../assets/game.png'
-import blog from '../assets/blog.png'
+import blogIcon from '../assets/blog.png'
 
 interface BottomNavProps {
   bio: () => void
   doom: () => void
   exp: () => void
+  blog: () => void
 }
 
-export default function BottomNav ({ bio, doom, exp }: BottomNavProps) {
+export default function BottomNav ({ bio, doom, exp, blog }: BottomNavProps) {
   return (
     <>
 
@@ -22,8 +23,8 @@ export default function BottomNav ({ bio, doom, exp }: BottomNavProps) {
                 About
             </List.Item>
             <List.Divider />
-            <List.Item onClick={() => console.log('Click')}>
-            <img src={blog} className={'icon'} alt=''/>
+            <List.Item onClick={blog}>
+            <img src={blogIcon} className={'icon'} alt=''/>
                 Blog
             </List.Item>
             <List.Divider />
