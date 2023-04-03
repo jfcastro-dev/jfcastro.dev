@@ -1,0 +1,14 @@
+---
+title: 'How to Know What Pitch is Coming'
+date: '2020-08-08'
+image: 'https://mlb.nbcsports.com/wp-content/uploads/sites/7/2019/06/gettyimages-85899790-e1559750899725.jpg'
+attr: 'Getty Images'
+---
+
+Baseball is back - for now at least. Coronavirus cases are surging, so I'm not sure how long this will last. Until then, I'll enjoy watching while I can. Wait, why are the Astros getting thrown at? Why did a reliever get suspended for over 13% of the season? The answer is a rather complicated one.
+
+In short, the Astros cheated their way to a world series. And, they kinda got away with it. I mean, they got caught. But ultimately, no players got punished. Upper management was impacted, as many of the coaches were fired and/or suspended. But how exactly did they cheat? Well, they stole the signs. Basically, they decrypted the signs relayed from catchers to pitchers on what pitch to throw. This alone is not illegal in baseball. And it's not exactly a SHA-512 Hash. There are only a handful of pitches in a pitcher's arsenal, so there aren't that many signs to decrypt. It is very possible for a human being to do so without any technology. The technology part - that's where it's illegal. Using technology in game to aid is forbidden. Admittedly, technology is a bit of a vague term. Players are allowed to take notes and refer to them in games, so we'll just use the word technology to mean any device requiring some type of energy to function - battery, electricity, solar power, etc. 
+
+The Astros ultimately used a camera with an absurd zoom to see the signs, then relayed the signs (allegedly) using bluetooth mics/headphones. This is a very clear cut violation of the rules. And they did this in 2017 and onwards, ultimately cheating teams they faced out of the opportunity to compete for a championship, and in the case of the Dodgers, a championship. So how could this be done legally? 
+
+Very easily, thanks to Statcast & SciKit Learn. What is Statcast? In short, it's MLB's free public data source. It provides clean, neatly organized CSVs on every pitch thrown in the season by a given pitcher. You can find out the batter they're against, the handedness, score, inning, etc. SciKit Learn is the most simple to use Machine Learning library out there, and one that is very well tested. The Decision Tree Model is of particular interest. A decision tree model just bases decisions on past data, and predicts future outcomes accordingly. So hypothetically, if one wanted to predict if a fast pitch or a slow pitch were coming, one could do so. And, one could also write down the results on paper to use in game. No use of technology in the game, no rules broken. And, one might even have [a resource that already does that online](https://github.com/jamescastro98/Prediction-Algos/blob/master/baseball.py) ;) In any case, hopefully we can get through this baseball season with the players staying safe, and without any more cheating.
