@@ -19,13 +19,16 @@ export default function Resume ({ closeWindow, x, width }: FrameProps) {
 				<b>Responsibilities</b>
 				<ul>
 					<li>
-                            Member of a small team behind an R&D project using Machine Learning on a cloud project
+                            Member of a small team behind an R&D project on a distributed cloud platform
 					</li>
 					<li>
-                            Completed Jira tickets in a timely fashion
+                            Reduced request failures by over 90%
 					</li>
 					<li>
-                            Redesigned & migrated database schema without interruption to the platform
+                            Redesigned & migrated database schema without interruption to the application
+					</li>
+					<li>
+							Completed jira tickets in a timely fashion
 					</li>
 				</ul>
 			</p>

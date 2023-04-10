@@ -36,6 +36,8 @@ export default function Desktop ({posts}: DesktopProps) {
 			{showResume && <Resume closeWindow={() => setShowResume(false)} x={isMobile ? '15vw' : '66vw'} width={defaultWidth}/>}
 			{showBlog && <Blog closeWindow={() => setShowBlog(false)} x={isMobile ? '15vw' : '35vw'} width={defaultWidth} posts={posts}/>}
 			{showDoom && <Doom closeWindow={() => setShowDoom(false)} x={isMobile ? '15vw' : '33vw'} width={'650'}/>}
-			<BottomNav isMobile={isMobile}/>
+			<BottomNav showAbout={() => setShowAbout(!showAbout)} showResume={()=>setShowResume(!showResume)}
+				showBlog={()=> setShowBlog(!showBlog)} showGame={()=> setShowDoom(!showDoom)}
+				isMobile={isMobile}/>
 		</>);
 }
