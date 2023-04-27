@@ -21,7 +21,7 @@ export interface PostData{
 	attr: string;
   }
 
-const postsDirectory = path.join(process.cwd(), './public/posts');
+const postsDirectory = path.join(process.cwd(), './public/blog/posts');
 
 async function getPost(fileName: string){
 	// Remove ".md" from file name to get id

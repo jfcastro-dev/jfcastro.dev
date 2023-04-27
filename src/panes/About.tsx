@@ -1,4 +1,5 @@
 import Window from '../components/Window';
+import Image from 'next/image';
 
 interface FrameProps {
   closeWindow: () => void
@@ -23,7 +24,12 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
 				</div>  
 				<div className='about'>
 					<div className='grid-item'>
-						<img src={'/assets/me.jpg'} style={{ width: '99%' }} alt="this is me" />
+						<Image
+							src={'/assets/me.jpg'}
+							alt={'me'}
+							width={'796'}
+							height={'745'}
+						/>
 					</div>
 				</div>
 			</div>

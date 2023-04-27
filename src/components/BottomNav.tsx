@@ -4,11 +4,9 @@ interface BottomNavProps{
 	showAbout: () => void,
 	showBlog: () => void,
 	showResume: () => void,
-	showGame: () => void,
-	isMobile: boolean
 }
 
-export default function BottomNav({showAbout, showBlog, showResume, showGame, isMobile}: BottomNavProps){
+export default function BottomNav({showAbout, showBlog, showResume}: BottomNavProps){
 	/*
         Yes, importing these icons in the old syle instead of  next/Image preloading them
         is bad practice. However, these images are 32x32. It feels absolutely redundant to preload.
@@ -32,16 +30,7 @@ export default function BottomNav({showAbout, showBlog, showResume, showGame, is
                         Resume
 					</List.Item>
 					<List.Divider />
-					
-					{isMobile? 
-						<></>
-						:
-						<List.Item onClick={showGame}>
-							<img src={'/assets/icons/game.png'} className={'icon'} alt=''/>
-							Doom
-						</List.Item>}
 				</List>
-
 			}/>
     
 		</>);
