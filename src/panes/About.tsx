@@ -44,9 +44,8 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
 				</a>
 			</p>
 			<div style={{paddingTop: 5}}>
-				<p><b>Currently Reading: </b> NodeJS Design Patterns</p>
-				<p><b>Currently Playing: </b> {'Baldur\'s Gate 3 (Early Access)'}</p>
-				<p><b>Currently Watching: </b> House of the Dragon</p>
+				<p><b>Currently Reading: </b> Writing an Interpreter in Go </p>
+				<p><b>Currently Playing: </b> {'Baldur\'s Gate 3'}</p>
 			</div>
 		</Window>
 	);
