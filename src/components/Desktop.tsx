@@ -33,7 +33,7 @@ export default function Desktop ({posts}: DesktopProps) {
 			{showAbout && <About closeWindow={() => setShowAbout(false)} x={isMobile ? '15vw' : '4vw'} width={defaultWidth}/>}
 			{showResume && <Resume closeWindow={() => setShowResume(false)} x={isMobile ? '15vw' : '66vw'} width={defaultWidth}/>}
 			{showBlog && <Blog closeWindow={() => setShowBlog(false)} x={isMobile ? '15vw' : '35vw'} width={defaultWidth} posts={posts}/>}
-			<BottomNav showAbout={() => setShowAbout(!showAbout)} showResume={()=>setShowResume(!showResume)}
-				showBlog={()=> setShowBlog(!showBlog)}/>
+			<BottomNav showAbout={() => setShowAbout(true)} showResume={()=>setShowResume(true)}
+				showBlog={()=> setShowBlog(true)}/>
 		</>);
 }
