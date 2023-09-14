@@ -18,7 +18,7 @@ Is this to say I was a bad engineer before? I don't think so - I think this has 
 **Correctness**
 
 This is a rather straightforward one, and perhaps the most important - does the code function as intended? Is the application meeting its expected behavior?
-Code correctness can range from introducing minor bugs that affect the user experience, to outright incorrect results.
+Code correctness can range from introducing minor bugs that affect the user experience, to outright incorrect results. Obviously, having the correct behavior for core functionality is pretty non-negotiable. So instead, think of this more as ironing out the edge cases & fixing bugs.
 
 **Performance**
 
