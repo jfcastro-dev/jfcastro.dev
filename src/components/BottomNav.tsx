@@ -1,16 +1,27 @@
 import { TaskBar, List } from '@react95/core';
+import { useEffect, useState } from 'react';
 
 interface BottomNavProps{
 	showAbout: () => void,
 	showBlog: () => void,
 	showResume: () => void,
+	showDoom: () => void,
 }
 
-export default function BottomNav({showAbout, showBlog, showResume}: BottomNavProps){
+export default function BottomNav({showAbout, showBlog, showResume, showDoom}: BottomNavProps){
 	/*
         Yes, importing these icons in the old syle instead of  next/Image preloading them
         is bad practice. However, these images are 32x32. It feels absolutely redundant to preload.
     */
+
+	const [disableDoom, setDisableDoom] = useState<boolean>(true);
+
+	useEffect(()=> {
+		const isFirefox = window.navigator.userAgent.indexOf('Firefox') > -1;
+		setDisableDoom(isFirefox);
+	},[]);
+   
+
 	return(
 		<>
 			<TaskBar list={
@@ -30,6 +41,13 @@ export default function BottomNav({showAbout, showBlog, showResume}: BottomNavPr
                         Resume
 					</List.Item>
 					<List.Divider />
+					{ !disableDoom && <>
+						<List.Item onClick={showDoom}>
+							<img src={'/assets/icons/game.png'} className={'icon'} alt=''/>
+                        Doom
+						</List.Item>
+						<List.Divider />
+					</>}
 				</List>
 			}/>
     
