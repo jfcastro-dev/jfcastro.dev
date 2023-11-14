@@ -2,7 +2,7 @@ import Window from '@/components/Window';
 import { PostData } from '@/lib/posts';
 import DOMPurify from 'dompurify';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 interface BlogProps {
@@ -15,15 +15,29 @@ interface BlogProps {
 export default function Blog ({ closeWindow, x, width, posts }: BlogProps) {
 	const postImgDir = '/blog/img/';
 	const [page, setPage] = useState<number>(0);
+	const [scrolling, setScrolling] = useState<boolean>(false);
+
+	useEffect(()=> {
+		const postBeginning = document.getElementById('post-beginning');
+
+		if(postBeginning && scrolling){
+			postBeginning.scrollIntoView({
+				behavior: 'smooth'
+			});
+			setScrolling(false);
+		}  
+
+	},[page]);
 
 	const handlePostChange = (postNumber: number) => {
 		if (postNumber >= 0 && postNumber < posts.length){
+			setScrolling(true);
 			setPage(postNumber);
 		}
 	};
 	return (
 		<Window closeWindow={closeWindow} x={x} width={width} title={'Blog'}>
-			<h3>Blog</h3>
+			<h3 id='post-beginning'>Blog</h3>
 			<div>
 				<h4><u>{posts[page].title}</u></h4>
 				<div className='blog-image'>
