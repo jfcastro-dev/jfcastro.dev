@@ -10,13 +10,30 @@ import videottf from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.tt
 import videoeot from '@react95/core/cjs/GlobalStyle/font/React95Video-Numbers.eot';
 
 /**
- * This is a fork of what is in the node modules - this was not supporting themes.
- * I just needed to change the background color
+ * This was in the node modules - I was having trouble getting themes to work,
+ * as well as the main React95 dep. Don't turn this into a typescript file, the imports
+ * have no type definitions.
  */
 import { scrollbars } from '@react95/core/cjs/GlobalStyle/Scrollbar';
 import Cursor from '@react95/core/cjs/Cursor/Cursor';
 
 const GlobalStyle = createGlobalStyle`
+body {
+  background-color: #3f5baf;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: materialText;
+}
+p{
+  padding-top: -10px;
+}
+a {
+  color: anchor;
+}
+a:visited {
+  color: anchorVisited;
+}
   @font-face {
     font-family: 'MS Sans Serif';
     src: url('${eot}');
@@ -36,49 +53,6 @@ const GlobalStyle = createGlobalStyle`
          url('${videoeot}?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
-  }
-  body {
-    background-color: #3f5baf;
-    margin: 0;
-    padding: 0;
-    font-size: 12px;
-    color: materialText;
-  }
-  p{
-    padding-top: -10px;
-  }
-  a {
-    color: anchor;
-  }
-  a:visited {
-    color: anchorVisited;
-  }
-  .icon{
-    padding-left:5px;
-  }
-  .blog-img {
-    width:99%;
-    max-height: 10vh;
-    overflow:hidden;
-  }
-  .grid-container {
-    text-align: left;
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: 0 auto;
-  } 
-  .about{
-    padding-left: 1vw;
-  }
-  .window{
-    font-size:13px;
-  }
-  .grid-item {
-    overflow: auto;
-  }
-  * {
-    font-family: 'MS Sans Serif';
-    box-sizing: border-box;
   }
   // scrollbar
   ${scrollbars}

@@ -5,12 +5,14 @@ import Resume from '@/panes/Resume';
 import Blog from '@/panes/Blog';
 import { PostData } from '@/lib/posts';
 import Doom from '@/panes/Doom';
+import { MOBILE_THRESHOLD } from '@/constants';
 
 interface DesktopProps{
 	posts: PostData[];
 }
 
-export default function Desktop ({posts}: DesktopProps) {
+export default function Desktop (props: DesktopProps) {
+	const {posts} = props;
 	const [defaultWidth, setDefaultWidth] = useState<string>('30vw');
 	const [isMobile, setIsMobile] = useState<boolean>(false);
 	const [showAbout, setShowAbout] = useState<boolean>(false);
@@ -19,7 +21,7 @@ export default function Desktop ({posts}: DesktopProps) {
 	const [showDoom, setShowDoom] = useState<boolean>(false);
 
 	useEffect(() => {
-		if (window.innerWidth < 1000) {
+		if (window.innerWidth < MOBILE_THRESHOLD) {
 			setDefaultWidth('70vw');
 			setShowAbout(true);
 			setIsMobile(true);

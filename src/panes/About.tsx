@@ -14,12 +14,10 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
 			<div className='grid-container'>
 				<div className='grid-item' >
 					<p>
-						{`Hey, I'm James. I'm an NY-based Software Engineer @ Canon and a
-                        Stony Brook Computer Science Grad. I've spent some time working
-                        over at Endeavor Streaming as a QA & SDET, so I have experience with
-                        testing & ensuring bug free deliverables. I love creating useful
-                        tools and learning new technologies. I've worked with a lot of Python,
-                        NodeJS w/ TypeScript, and cloud services like AWS & Google Cloud.`}
+						{`Hey, I'm James. I'm an NY-based Software Engineer @ Canon, former SDET @ Endeavor and
+                        Stony Brook Alum. As a software engineer, I'm always looking to continue
+						learning & getting better. I have professional experience with TypeScript & Python, and have become
+						a Go hobbyist. `}
 					</p>
 				</div>  
 				<div className='about'>
@@ -35,16 +33,16 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
 			</div>
 
 			<p>
-				{`When I'm not programming, working or studying, I try to keep busy by playing guitar, gardening,
+				{`When I'm not programming or working, I try to keep busy by playing guitar, gardening,
                 lifting weights, watching the Mets, and of course spending time with some quality friends.
-                I ocassionally go on hikes, take some photos, and try my hand at some
+                I ocassionally go on hikes, take some photos, and like to try my hand at some
                 new recipes - results may vary on that one. Wanna connect? Add me on `}
 				<a href='https://www.linkedin.com/in/james-castro-b38b0717b/'>
 					{'LinkedIn here'}
 				</a>
 			</p>
-			<div style={{paddingTop: 5}}>
-				<p><b>Currently Reading: </b> Writing an Interpreter in Go </p>
+			<div className='padded-section'>
+				<p><b>Currently Reading: </b> Outlive by Peter Attia </p>
 				<p><b>Currently Playing: </b> {'Baldur\'s Gate 3'}</p>
 			</div>
 		</Window>

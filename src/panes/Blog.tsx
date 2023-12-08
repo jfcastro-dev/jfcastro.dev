@@ -12,7 +12,8 @@ interface BlogProps {
   posts: PostData[]
 }
 
-export default function Blog ({ closeWindow, x, width, posts }: BlogProps) {
+export default function Blog (props: BlogProps) {
+	const { closeWindow, x, width, posts } = props;
 	const postImgDir = '/blog/img/';
 	const [page, setPage] = useState<number>(0);
 	const [scrolling, setScrolling] = useState<boolean>(false);
@@ -20,7 +21,7 @@ export default function Blog ({ closeWindow, x, width, posts }: BlogProps) {
 	useEffect(()=> {
 		const postBeginning = document.getElementById('post-beginning');
 
-		if(postBeginning && scrolling){
+		if(postBeginning && scrolling) {
 			postBeginning.scrollIntoView({
 				behavior: 'smooth'
 			});
@@ -30,11 +31,12 @@ export default function Blog ({ closeWindow, x, width, posts }: BlogProps) {
 	},[page]);
 
 	const handlePostChange = (postNumber: number) => {
-		if (postNumber >= 0 && postNumber < posts.length){
+		if (postNumber >= 0 && postNumber < posts.length) {
 			setScrolling(true);
 			setPage(postNumber);
 		}
 	};
+
 	return (
 		<Window closeWindow={closeWindow} x={x} width={width} title={'Blog'}>
 			<h3 id='post-beginning'>Blog</h3>
@@ -53,8 +55,8 @@ export default function Blog ({ closeWindow, x, width, posts }: BlogProps) {
 				<div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(posts[page].contentHtml) }} />
 				<hr className='hr hr-blurry' />
 				<span>
-					{page > 0 && <button style={{float:'right'}} onClick={()=>handlePostChange(page-1)}>Next Post</button>}
-					{page < posts.length-1 && <button style={{float:'left'}} onClick={()=>handlePostChange(page+1)}>Previous Post</button>}
+					{page > 0 && <button className='btn-right' onClick={()=>handlePostChange(page-1)}>Next Post</button>}
+					{page < posts.length-1 && <button className='btn-left' onClick={()=>handlePostChange(page+1)}>Previous Post</button>}
 				</span>
 			</div>
 		</Window>

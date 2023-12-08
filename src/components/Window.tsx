@@ -10,7 +10,8 @@ interface FrameProps {
   borderless?: boolean
 }
 
-export default function Window ({ closeWindow, width, title, x, borderless, children }: PropsWithChildren<FrameProps>) {
+export default function Window (props: PropsWithChildren<FrameProps>) {
+	const { closeWindow, width, title, x, borderless, children } = props;
 	return (
 		<div>
 			<Modal
@@ -21,21 +22,17 @@ export default function Window ({ closeWindow, width, title, x, borderless, chil
 				hasWindowButton={true}
 				style={{
 					left: x,
-					top: borderless? '' :'5vh',
+					top: borderless ? '' :'5vh',
 					width
 				}}>
 				<Frame
 					bg="white"
 					boxShadow="in"
-					padding={borderless? 0 : 20}
-					className='window'
-					style={{
-						overflowY: 'auto',
-						maxHeight: '70vh'
-					}}>
-
-					{children}
-
+					padding={borderless ? 0 : 20}
+					className='window'>
+					<div className='test'>
+						{children}
+					</div>
 				</Frame>
 			</Modal >
 		</div>

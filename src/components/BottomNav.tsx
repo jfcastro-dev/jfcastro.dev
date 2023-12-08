@@ -1,3 +1,4 @@
+import { MOBILE_THRESHOLD } from '@/constants';
 import { TaskBar, List } from '@react95/core';
 import { useEffect, useState } from 'react';
 
@@ -8,17 +9,15 @@ interface BottomNavProps{
 	showDoom: () => void,
 }
 
-export default function BottomNav({showAbout, showBlog, showResume, showDoom}: BottomNavProps){
-	/*
-        Yes, importing these icons in the old syle instead of  next/Image preloading them
-        is bad practice. However, these images are 32x32. It feels absolutely redundant to preload.
-    */
+export default function BottomNav(props: BottomNavProps){
+	const {showAbout, showBlog, showResume, showDoom} = props;
 
 	const [disableDoom, setDisableDoom] = useState<boolean>(true);
 
 	useEffect(()=> {
 		const isFirefox = window.navigator.userAgent.indexOf('Firefox') > -1;
-		setDisableDoom(isFirefox);
+		const isMobile = window.innerWidth < MOBILE_THRESHOLD;
+		setDisableDoom(isFirefox || isMobile);
 	},[]);
    
 

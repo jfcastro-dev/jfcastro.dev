@@ -6,7 +6,8 @@ interface FrameProps {
   x: string;
 }
 
-export default function Resume ({ closeWindow, x, width }: FrameProps) {
+export default function Resume (props: FrameProps) {
+	const { closeWindow, x, width } = props;
 	return (
 		<Window closeWindow={closeWindow} x={x} width={width} title={'Resume'}>
 			<h3>Experience</h3>
