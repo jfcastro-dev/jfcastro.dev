@@ -12,7 +12,7 @@ export default function Resume (props: FrameProps) {
 		<Window closeWindow={closeWindow} x={x} width={width} title={'Resume'}>
 			<h3>Experience</h3>
 			<>
-				<h5>Software Development Engineer, Associate</h5>
+				<h5>Software Development Engineer</h5>
 				<h6><b>Canon</b></h6>
 				<i>Aug 2022 - Present</i>
 			</>

@@ -6,20 +6,10 @@ interface BottomNavProps{
 	showAbout: () => void,
 	showBlog: () => void,
 	showResume: () => void,
-	showDoom: () => void,
 }
 
 export default function BottomNav(props: BottomNavProps){
-	const {showAbout, showBlog, showResume, showDoom} = props;
-
-	const [disableDoom, setDisableDoom] = useState<boolean>(true);
-
-	useEffect(()=> {
-		const isFirefox = window.navigator.userAgent.indexOf('Firefox') > -1;
-		const isMobile = window.innerWidth < MOBILE_THRESHOLD;
-		setDisableDoom(isFirefox || isMobile);
-	},[]);
-   
+	const {showAbout, showBlog, showResume} = props;
 
 	return(
 		<>
@@ -40,15 +30,7 @@ export default function BottomNav(props: BottomNavProps){
                         Resume
 					</List.Item>
 					<List.Divider />
-					{ !disableDoom && <>
-						<List.Item onClick={showDoom}>
-							<img src={'/assets/icons/game.png'} className={'icon'} alt=''/>
-                        Doom
-						</List.Item>
-						<List.Divider />
-					</>}
 				</List>
 			}/>
-    
 		</>);
 }
