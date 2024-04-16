@@ -1,7 +1,6 @@
 import Window from '@/components/Window';
 import { PostData } from '@/lib/posts';
 import DOMPurify from 'dompurify';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 
@@ -42,13 +41,8 @@ export default function Blog (props: BlogProps) {
 			<h3 id='post-beginning'>Blog</h3>
 			<div>
 				<h4><u>{posts[page].title}</u></h4>
-				<div className='blog-image'>
-					<Image
-						src={postImgDir + posts[page].image}
-						alt={posts[page].title}
-						width={'800'}
-						height={'450'}
-					/>
+				<div className='blog-image-container'>
+					<img src={`${postImgDir}${posts[page].image}`} alt={posts[page].title} className={'blog-post-image'} />
 				</div>
 				<i>{posts[page].attr}</i>
 				<p><i>{new Date(posts[page].date).toDateString()}</i></p>
