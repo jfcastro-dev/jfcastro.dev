@@ -32,6 +32,14 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "react/prop-types": "off",
+        "react/destructuring-assignment": [
+            "error",
+            "always"
+        ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-explicit-any": "off"
     }
 }

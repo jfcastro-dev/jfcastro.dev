@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 
 
 interface BlogProps {
-  closeWindow: () => void
-  width: string
-  x: string
-  posts: PostData[]
+  closeWindow: () => void;
+  width: string;
+  x: string;
+  posts: PostData[];
 }
 
 export default function Blog (props: BlogProps) {
@@ -20,7 +20,7 @@ export default function Blog (props: BlogProps) {
 	useEffect(()=> {
 		const postBeginning = document.getElementById('post-beginning');
 
-		if(postBeginning && scrolling) {
+		if (postBeginning && scrolling) {
 			postBeginning.scrollIntoView({
 				behavior: 'smooth'
 			});

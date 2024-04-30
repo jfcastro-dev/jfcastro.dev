@@ -1,7 +1,6 @@
 ## jfcastro.dev
 If you're reading this - hi there 👋, you've found the repo for my personal site. This isn't some technical masterpiece, just a site I 
-hacked together to support hosting a blog without having to manage a backend. This probably won't be seeing any updates (except for adding markdown blog posts)
-And yes, this absolutely needs a cleanup & better linter rules.
+hacked together to support hosting a blog without having to manage a backend. This probably won't be seeing many updates (except for adding markdown blog posts)
 
 #### Tech Stack
 This website uses React & NextJS in TypeScript, as well as the [React95 Project](https://github.com/React95/React95). Deployments are automated using the Vercel integration with GitHub Actions.

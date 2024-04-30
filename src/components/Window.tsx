@@ -30,7 +30,7 @@ export default function Window (props: PropsWithChildren<FrameProps>) {
 					boxShadow="in"
 					padding={borderless ? 0 : 20}
 					className='window'>
-					<div className='test'>
+					<div>
 						{children}
 					</div>
 				</Frame>

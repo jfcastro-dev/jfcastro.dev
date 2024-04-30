@@ -1,6 +1,4 @@
-import { MOBILE_THRESHOLD } from '@/constants';
 import { TaskBar, List } from '@react95/core';
-import { useEffect, useState } from 'react';
 
 interface BottomNavProps{
 	showAbout: () => void,
