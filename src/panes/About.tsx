@@ -23,7 +23,7 @@ export default function About ({ closeWindow, x, width }: FrameProps) {
 				<div className='about'>
 					<div className='grid-item'>
 						<Image
-							src={'/assets/me.jpg'}
+							src={'/assets/me_with_camera.png'}
 							alt={'me'}
 							width={'796'}
 							height={'745'}
